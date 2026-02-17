@@ -1,0 +1,174 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+    padding-bottom: calc({{ section.settings.padding_bottom }}px * 0.75);
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .iframe-container-{{ section.id }} {
+    width: 100%;
+    max-width: {{ section.settings.max_width }}px;
+    margin: 0 auto;
+  }
+
+  .iframe-container-{{ section.id }} iframe {
+    width: 100%;
+    height: {{ section.settings.iframe_height }}px;
+    border: none;
+    display: block;
+  }
+
+  {% if section.settings.full_width %}
+    .iframe-container-{{ section.id }} {
+      max-width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  {% endif %}
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width section-{{ section.id }}-padding">
+    {% if section.settings.heading != blank %}
+      <h2 class="title {{ section.settings.heading_size }}">
+        {{ section.settings.heading | escape }}
+      </h2>
+    {% endif %}
+
+    <div class="iframe-container-{{ section.id }}">
+      {% if section.settings.iframe_url != blank %}
+        <iframe
+          src="{{ section.settings.iframe_url }}"
+          title="{{ section.settings.heading | default: 'Embedded content' | escape }}"
+          loading="{{ section.settings.loading }}"
+          {% if section.settings.allow_fullscreen %}allowfullscreen{% endif %}
+          allow="{{ section.settings.allow_permissions }}"
+        ></iframe>
+      {% else %}
+        <p>Please set an iframe URL in the section settings.</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Iframe",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "iframe_url",
+      "label": "Iframe URL",
+      "info": "The full URL of the page to embed (e.g. https://example.com)",
+      "default": "https://shopify-staging-production.up.railway.app/bygg/desktop"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "options": [
+        { "value": "h2", "label": "Small" },
+        { "value": "h1", "label": "Medium" },
+        { "value": "h0", "label": "Large" }
+      ],
+      "default": "h1"
+    },
+    {
+      "type": "range",
+      "id": "iframe_height",
+      "min": 300,
+      "max": 2000,
+      "step": 50,
+      "unit": "px",
+      "label": "Iframe height",
+      "default": 800
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 600,
+      "max": 1600,
+      "step": 50,
+      "unit": "px",
+      "label": "Max width",
+      "default": 1200
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "allow_fullscreen",
+      "label": "Allow fullscreen",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "loading",
+      "label": "Loading behavior",
+      "options": [
+        { "value": "eager", "label": "Eager (load immediately)" },
+        { "value": "lazy", "label": "Lazy (load when visible)" }
+      ],
+      "default": "eager"
+    },
+    {
+      "type": "text",
+      "id": "allow_permissions",
+      "label": "Iframe permissions (allow attribute)",
+      "info": "Comma-separated permissions, e.g. clipboard-write; encrypted-media"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Iframe"
+    }
+  ]
+}
+{% endschema %}

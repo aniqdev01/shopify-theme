@@ -1,0 +1,79 @@
+<section class="company-contact-section">
+  <div class="page-width">
+    <h2 class="form-title">{{ section.settings.heading }}</h2>
+
+    {% form 'contact' %}
+      {{ form.errors | default_errors }}
+
+      <div class="form-grid">
+        <div class="field">
+          <label for="first-name">First name</label>
+          <input type="text" name="contact[first_name]" id="first-name" required>
+        </div>
+
+        <div class="field">
+          <label for="last-name">Last name</label>
+          <input type="text" name="contact[last_name]" id="last-name" required>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" name="contact[email]" id="email" required>
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input type="tel" name="contact[phone]" id="phone">
+        </div>
+
+        <div class="field full">
+          <label for="message">Message</label>
+          <textarea name="contact[body]" id="message" rows="5"></textarea>
+        </div>
+      </div>
+
+      <button type="submit" class="btn">{{ section.settings.button_text }}</button>
+    {% endform %}
+  </div>
+</section>
+
+<style>
+.company-contact-section .form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+.company-contact-section .field.full{
+  grid-column:1 / -1;
+}
+@media(max-width:768px){
+  .company-contact-section .form-grid{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Company Contact Form",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Contact Our Company"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Send Message"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Company Contact Form"
+    }
+  ]
+}
+{% endschema %}

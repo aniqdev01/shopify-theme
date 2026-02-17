@@ -1,0 +1,104 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement-bar-0": {
+          "type": "announcement",
+          "settings": {
+            "text": " Add anything here or just remove it..",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement-bar-0"
+      ],
+      "settings": {
+        "enable_customer_avatar": true,
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "color_scheme": "scheme-1",
+        "show_line_separator": true,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "custom_css": [
+        "sticky-header {padding: 15px 0;}",
+        "nav.header__inline-menu {display: none;}",
+        "@media screen and (max-width: 750px) {.search-modal__form {width: 100%; display: none; } sticky-header {padding: 0px 0 !important;}}"
+      ],
+      "settings": {
+        "phone_number": "",
+        "show_ctn_search_bar": true,
+        "show_crat_cta": true,
+        "show_logo": true,
+        "cta_show_account": false,
+        "show_searc_bar": true,
+        "logo_position": "middle-left",
+        "mobile_logo_position": "center",
+        "menu": "main-menu-1",
+        "menu_type_desktop": "dropdown",
+        "sticky_header_type": "on-scroll-up",
+        "show_line_separator": true,
+        "color_scheme": "scheme-1",
+        "menu_color_scheme": "scheme-1",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "enable_customer_avatar": false,
+        "margin_bottom": 0,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "header_Wn8MJQ": {
+      "type": "header",
+      "custom_css": [
+        "sticky-header {background: #f1f3f4 !important; /* margin: 10px 0; */}"
+      ],
+      "name": "header",
+      "settings": {
+        "phone_number": "Since 2005",
+        "show_ctn_search_bar": false,
+        "show_crat_cta": false,
+        "show_logo": false,
+        "cta_show_account": false,
+        "show_searc_bar": false,
+        "logo_position": "middle-left",
+        "mobile_logo_position": "center",
+        "menu": "main-menu-1",
+        "menu_type_desktop": "dropdown",
+        "sticky_header_type": "on-scroll-up",
+        "show_line_separator": true,
+        "color_scheme": "",
+        "menu_color_scheme": "scheme-2",
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "enable_customer_avatar": true,
+        "margin_bottom": 0,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header",
+    "header_Wn8MJQ"
+  ]
+}

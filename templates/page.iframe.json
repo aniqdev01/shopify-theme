@@ -1,0 +1,18 @@
+{
+  "sections": {
+    "iframe": {
+      "type": "custom-iframe",
+      "settings": {
+        "iframe_url": "https://shopify-staging-production.up.railway.app/bygg/desktop",
+        "iframe_height": 800,
+        "max_width": 1200,
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "iframe"
+  ]
+}

@@ -1,0 +1,397 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_hp_pMihiD": {
+      "type": "hero-hp",
+      "blocks": {
+        "slide_P4ViLY": {
+          "type": "slide",
+          "settings": {
+            "heading": "We have shelves in stock for delivery before the New Year",
+            "text": "",
+            "image": "shopify://shop_images/dekkreolkonkurranse-okt-21-removebg-preview_1.png",
+            "primary_label": "Design 3D Solution",
+            "primary_link": "",
+            "secondary_label": "Shop Now",
+            "secondary_link": ""
+          }
+        },
+        "slide_MPWAN6": {
+          "type": "slide",
+          "settings": {
+            "heading": "Complete Warehouse & Workshop Storage Solutions",
+            "text": "",
+            "image": "shopify://shop_images/Oppbevaringsskap-2000x1000x500mm-bla-apen-e1616684015825-removebg-preview_1.png",
+            "primary_label": "Design 3D Solution",
+            "primary_link": "",
+            "secondary_label": "Shop Now",
+            "secondary_link": ""
+          }
+        },
+        "slide_gwQjRg": {
+          "type": "slide",
+          "settings": {
+            "heading": "Smart Storage Solutions for Warehouses and Workshops",
+            "text": "",
+            "image": "shopify://shop_images/BITO-garasjereol-med-kasser-removebg-preview_1.png",
+            "primary_label": "Design 3D Solution",
+            "primary_link": "",
+            "secondary_label": "Shop Now",
+            "secondary_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_P4ViLY",
+        "slide_MPWAN6",
+        "slide_gwQjRg"
+      ],
+      "name": "Fade Hero Swiper",
+      "settings": {
+        "bg_image": "shopify://shop_images/Rectangle_10.png",
+        "overlay_opacity": 10,
+        "heading_color": "#2f2f2f",
+        "text_color": "#333333",
+        "primary_btn_bg": "#c4262f",
+        "primary_btn_hover": "#b5141a",
+        "primary_btn_text": "#ffffff",
+        "secondary_btn_bg": "#1f4b7f",
+        "secondary_btn_hover": "#16365c",
+        "secondary_btn_text": "#ffffff"
+      }
+    },
+    "slideshow_8zJdp6": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_KD3Fht": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_10.png",
+            "image_overlay_opacity": 0,
+            "heading": "We have shelves in stock for delivery before the New Year",
+            "heading_size": "hxl",
+            "subheading": "",
+            "button_label": "Design 3D Solution",
+            "link": "#",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-left",
+            "text_alignment": "left",
+            "text_alignment_mobile": "left",
+            "color_scheme": "scheme-2"
+          }
+        },
+        "slide_8R4WAQ": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image_overlay_opacity": 0,
+            "heading": "Lysbilde",
+            "heading_size": "h1",
+            "subheading": "Fortell merkevarens historie gjennom bilder",
+            "button_label": "Knappetikett",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_KD3Fht",
+        "slide_8R4WAQ"
+      ],
+      "disabled": true,
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Lysbildefremvisning om merkevaren"
+      }
+    },
+    "trust_LxjjfP": {
+      "type": "trust",
+      "blocks": {
+        "logo_KTUhpi": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Coca_Cola.png",
+            "alt_text": "d"
+          }
+        },
+        "logo_jFh9dP": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Ringnes.png",
+            "alt_text": ""
+          }
+        },
+        "logo_wNkCrH": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Aleris.png",
+            "alt_text": ""
+          }
+        },
+        "logo_eeE8Uz": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Wurth.png",
+            "alt_text": "d"
+          }
+        },
+        "logo_X4CYjT": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Ringnes.png",
+            "alt_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_KTUhpi",
+        "logo_jFh9dP",
+        "logo_wNkCrH",
+        "logo_eeE8Uz",
+        "logo_X4CYjT"
+      ],
+      "name": "Trusted By",
+      "settings": {
+        "heading": "Trusted By",
+        "heading_size": 24,
+        "heading_color": "#2f2f2f",
+        "link_text": "See more",
+        "link_url": "",
+        "link_color": "#2f2f2f",
+        "logo_height": 50
+      }
+    },
+    "hp_feature_collection_CUJxz8": {
+      "type": "hp-feature-collection",
+      "name": "ctm feature collection",
+      "settings": {
+        "collection": "startside",
+        "products_to_show": 4,
+        "title": "Bestsellers",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-3",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "collection": "all",
+        "products_to_show": 4,
+        "title": "Bestsellers",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-3",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
+    "solutions_grid_KkMBwx": {
+      "type": "solutions-grid",
+      "blocks": {
+        "solution_RBpb6w": {
+          "type": "solution",
+          "settings": {
+            "image": "shopify://shop_images/Frame_84.png",
+            "icon": "shopify://shop_images/Frame_85.svg",
+            "title": "Lumber Racks",
+            "link": "#"
+          }
+        },
+        "solution_dmXjcV": {
+          "type": "solution",
+          "settings": {
+            "image": "shopify://shop_images/Mezanine.png",
+            "icon": "shopify://shop_images/Frame_85.svg",
+            "title": "Mezanine",
+            "link": "#"
+          }
+        },
+        "solution_9Qtwqn": {
+          "type": "solution",
+          "settings": {
+            "image": "shopify://shop_images/BITO_Small_goods_rack.png",
+            "icon": "shopify://shop_images/Frame_85.svg",
+            "title": "BITO Small Goods Rack",
+            "link": "#"
+          }
+        },
+        "solution_fbeiWQ": {
+          "type": "solution",
+          "settings": {
+            "image": "shopify://shop_images/Branch_Rack.png",
+            "icon": "shopify://shop_images/Frame_85.svg",
+            "title": "Branch Rack",
+            "link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "solution_RBpb6w",
+        "solution_dmXjcV",
+        "solution_9Qtwqn",
+        "solution_fbeiWQ"
+      ],
+      "name": "Solutions Grid",
+      "settings": {
+        "heading": "Solutions",
+        "view_all_text": "View All",
+        "view_all_link": "#"
+      }
+    },
+    "home_category_grid_6EAdgp": {
+      "type": "home-category-grid",
+      "blocks": {
+        "column_JmCVFA": {
+          "type": "column",
+          "settings": {
+            "heading": "Reolbygger",
+            "block_type": "manual",
+            "collection": "",
+            "items_limit": 3,
+            "show_price": true,
+            "image_1": "shopify://shop_images/dekkreolkonkurranse-okt-21-300x300_1.png",
+            "title_1": "Pallet racking",
+            "link_1": "#",
+            "image_2": "shopify://shop_images/dekkreolkonkurranse-okt-21-300x300_1.png",
+            "title_2": "Small goods rack",
+            "link_2": "#",
+            "image_3": "shopify://shop_images/dekkreolkonkurranse-okt-21-300x300_1.png",
+            "title_3": "Strip gate",
+            "link_3": "#",
+            "button_text": "Explore more",
+            "button_link": "#"
+          }
+        },
+        "column_YLBUa4": {
+          "type": "column",
+          "settings": {
+            "heading": "Shop",
+            "block_type": "collection",
+            "collection": "startside",
+            "items_limit": 3,
+            "show_price": true,
+            "title_1": "",
+            "link_1": "",
+            "title_2": "",
+            "link_2": "",
+            "title_3": "",
+            "link_3": "",
+            "button_text": "Explore more",
+            "button_link": "#"
+          }
+        },
+        "column_GNn4te": {
+          "type": "column",
+          "settings": {
+            "heading": "Services",
+            "block_type": "manual",
+            "collection": "",
+            "items_limit": 3,
+            "show_price": true,
+            "image_1": "shopify://shop_images/BITO-Pro-Pallereol-1_1.png",
+            "title_1": "Inspection & Safety",
+            "link_1": "#",
+            "image_2": "shopify://shop_images/BITO-Pro-Pallereol-1_1_1.png",
+            "title_2": "Installation & Assembly",
+            "link_2": "",
+            "image_3": "shopify://shop_images/BITO-Pro-Pallereol-1_1_2.png",
+            "title_3": "Consulting & CAD Drawings",
+            "link_3": "",
+            "button_text": "Explore more",
+            "button_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "column_JmCVFA",
+        "column_YLBUa4",
+        "column_GNn4te"
+      ],
+      "name": "Home Category Columns",
+      "settings": {}
+    },
+    "text_with_button_9yYjqF": {
+      "type": "text-with-button",
+      "name": "Text with Button Bar",
+      "settings": {
+        "text": "sum dolor sit amet, consectetur adipiscing elit. Curabitur gravida m",
+        "button_label": "Contact Us",
+        "button_link": "",
+        "background_color": "#f1f3f4",
+        "text_color": "#000000",
+        "text_size": 16,
+        "button_bg": "#c4262f",
+        "button_text_color": "#ffffff",
+        "button_text_size": 14,
+        "button_radius": 6,
+        "padding_vertical": 10,
+        "max_width": 1200
+      }
+    }
+  },
+  "order": [
+    "hero_hp_pMihiD",
+    "slideshow_8zJdp6",
+    "trust_LxjjfP",
+    "hp_feature_collection_CUJxz8",
+    "featured_collection",
+    "solutions_grid_KkMBwx",
+    "home_category_grid_6EAdgp",
+    "text_with_button_9yYjqF"
+  ]
+}

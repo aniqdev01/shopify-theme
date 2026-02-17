@@ -1,0 +1,62 @@
+{% assign current_collection = collection %}
+
+{% if template contains 'product' and collection == nil %}
+  {% for c in product.collections %}
+    {% assign current_collection = c %}
+    {% break %}
+  {% endfor %}
+{% endif %}
+
+<nav class="custom-breadcrumb" role="navigation">
+  <a href="{{ routes.root_url }}">Home</a>
+
+  {% if current_collection %}
+    <span class="divider">/</span>
+    <a href="{{ current_collection.url }}">
+      {{ current_collection.title }}
+    </a>
+  {% endif %}
+
+  <span class="divider">/</span>
+
+  <span class="current">
+    {% if template contains 'product' %}
+      {{ product.title }}
+    {% elsif template contains 'collection' %}
+      {{ collection.title }}
+    {% elsif template contains 'page' %}
+      {{ page.title }}
+    {% endif %}
+  </span>
+</nav>
+
+<style>
+.custom-breadcrumb {
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: #9aa0a6;
+}
+
+.custom-breadcrumb a {
+    color: #2F2F2F;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0;
+}
+
+.custom-breadcrumb .divider {
+    margin: 0 0px;
+    color: #2F2F2F;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.custom-breadcrumb .current {
+    color: #2D4D86;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0;
+}
+
+</style>

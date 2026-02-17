@@ -1,0 +1,9 @@
+{% for product in products %}
+<li class="grid__item">
+  {% render 'card-product',
+    card_product: product,
+    quick_add: 'standard',
+    section_id: section.id
+  %}
+</li>
+{% endfor %}

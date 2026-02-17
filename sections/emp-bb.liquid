@@ -1,0 +1,89 @@
+<section class="b2b-contact-section">
+  <div class="page-width">
+    <h2 class="form-title">{{ section.settings.heading }}</h2>
+
+    {% form 'contact' %}
+      {{ form.errors | default_errors }}
+
+      <div class="form-grid">
+        <div class="field">
+          <label for="company-name">Company Name</label>
+          <input type="text" name="contact[company]" id="company-name" required>
+        </div>
+
+        <div class="field">
+          <label for="contact-person">Contact Person</label>
+          <input type="text" name="contact[name]" id="contact-person" required>
+        </div>
+
+        <div class="field">
+          <label for="email-b2b">Business Email</label>
+          <input type="email" name="contact[email]" id="email-b2b" required>
+        </div>
+
+        <div class="field">
+          <label for="phone-b2b">Phone</label>
+          <input type="tel" name="contact[phone]" id="phone-b2b">
+        </div>
+
+        <div class="field">
+          <label for="quantity">Estimated Order Quantity</label>
+          <input type="number" name="contact[order_quantity]" id="quantity">
+        </div>
+
+        <div class="field">
+          <label for="country">Country</label>
+          <input type="text" name="contact[country]" id="country">
+        </div>
+
+        <div class="field full">
+          <label for="message-b2b">Business Message</label>
+          <textarea name="contact[body]" id="message-b2b" rows="5"></textarea>
+        </div>
+      </div>
+
+      <button type="submit" class="btn">{{ section.settings.button_text }}</button>
+    {% endform %}
+  </div>
+</section>
+
+<style>
+.b2b-contact-section .form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+.b2b-contact-section .field.full{
+  grid-column:1 / -1;
+}
+@media(max-width:768px){
+  .b2b-contact-section .form-grid{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "B2B Wholesaler Form",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "B2B / Wholesale Inquiry"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Submit Inquiry"
+    }
+  ],
+  "presets": [
+    {
+      "name": "B2B Wholesaler Form"
+    }
+  ]
+}
+{% endschema %}

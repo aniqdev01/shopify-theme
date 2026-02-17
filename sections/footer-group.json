@@ -1,0 +1,94 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "image_xBbL98": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/logo-white_1.png",
+            "tex_a": "<p>Monday - Friday </p><p>08:00 - 16:00</p><p>+47 639 35 200<br/>post@reolteknikk.no</p>",
+            "image_width": 190,
+            "alignment": "center"
+          }
+        },
+        "link_list_THMKWL": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "quick-links"
+          }
+        },
+        "link_list_hYWfi6": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Company",
+            "menu": "company"
+          }
+        },
+        "link_list_7pm3dT": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Customer Center",
+            "menu": "customer-center"
+          }
+        }
+      },
+      "block_order": [
+        "image_xBbL98",
+        "link_list_THMKWL",
+        "link_list_hYWfi6",
+        "link_list_7pm3dT"
+      ],
+      "settings": {
+        "copyright_text": "© 2020 Reolteknikk AS.",
+        "facebook_url": "#",
+        "facebook_icon": "shopify://shop_images/facebook-svgrepo-com_1.svg",
+        "youtube_url": "#",
+        "youtube_icon": "shopify://shop_images/youtube-round-svgrepo-com_1.svg",
+        "linkedin_url": "#",
+        "linkedin_icon": "shopify://shop_images/linkedin-round-svgrepo-com_1.svg",
+        "logo_height": 32,
+        "logo_1": "shopify://shop_images/cocacola-ar21_1.png",
+        "logo_2": "shopify://shop_images/Frame.png",
+        "logo_3": "shopify://shop_images/ringnes_logo_eventi_2_1.png",
+        "logo_4": "shopify://shop_images/aleris-logo-png_seeklogo-491532-removebg-preview_2_1.png",
+        "logo_5": "shopify://shop_images/kunde-home-cottage-removebg-preview_1_1.png",
+        "heading_text": "Sign up for the newsletter!",
+        "placeholder_text": "Email Address here",
+        "button_text": "Subscribe",
+        "bg_color": "#2f2f2f",
+        "text_color": "#ffffff",
+        "text_size": 32,
+        "button_bg": "#1f5da8",
+        "button_text_color": "#ffffff",
+        "color_scheme": "scheme-4",
+        "newsletter_enable": false,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": true,
+        "show_social": true,
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "payment_enable": true,
+        "show_policy": true,
+        "margin_top": 0,
+        "padding_top": 60,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

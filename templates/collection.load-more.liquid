@@ -1,0 +1,7 @@
+{% layout none %}
+
+{% render 'load-more-products',
+  collection: collection,
+  offset: request.params.offset,
+  limit: request.params.limit
+%}
