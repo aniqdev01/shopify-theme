@@ -39,20 +39,6 @@
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
-    {% if request.host contains '127.0.0.1' or request.host contains 'localhost' %}
-      <script>
-        (function() {
-          var originalFetch = window.fetch;
-          window.fetch = function(url, options) {
-            if (typeof url === 'string' && url.includes('/api/collect')) {
-              return Promise.resolve(new Response('', { status: 200 }));
-            }
-            return originalFetch.apply(this, arguments);
-          };
-        })();
-      </script>
-    {% endif %}
-
     {{ content_for_header }}
 
     {%- liquid
