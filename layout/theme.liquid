@@ -480,6 +480,14 @@ document.addEventListener("DOMContentLoaded", () => {
         break;
       case "FETCH_DATA":
         var fetchData = event.data.data;
+        var fetchUrl = fetchData.url;
+        try {
+          var urlObj = new URL(fetchUrl);
+          if (urlObj.hostname === window.location.hostname
+              || urlObj.hostname.endsWith('.myshopify.com')) {
+            fetchUrl = urlObj.pathname + urlObj.search;
+          }
+        } catch (e) {}
         var fetchOptions = {
           method: fetchData.method || "GET",
           headers: fetchData.headers || {},
@@ -491,7 +499,7 @@ document.addEventListener("DOMContentLoaded", () => {
             fetchOptions.headers["Content-Type"] = "application/json";
           }
         }
-        fetch(fetchData.url, fetchOptions)
+        fetch(fetchUrl, fetchOptions)
           .then(function (response) {
             return response.json()
               .then(function (data) { return { status: response.status, data: data }; })
