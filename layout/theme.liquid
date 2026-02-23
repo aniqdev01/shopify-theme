@@ -458,14 +458,65 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 </script>
-{% comment %} {% if template.name == 'product' %}
- <script>
-  const script = document.createElement("script");
-script.src =
-  "https://shopify-staging-production.up.railway.app/scripts/postMessageParent.js";
-document.head.appendChild(script);
- </script>
-{% endif %} {% endcomment %}
+<script>
+(function() {
+  function sendResponse(event, data) {
+    var responseMessage = {
+      type: "RESPONSE",
+      action: event.data.action,
+      data: data,
+    };
+    if (event.source) {
+      event.source.postMessage(responseMessage, event.origin);
+    }
+  }
+
+  window.addEventListener("message", function (event) {
+    if (event.data.type !== "REQUEST") return;
+
+    switch (event.data.action) {
+      case "GET_SEARCH_PARAMS":
+        sendResponse(event, window.location.search);
+        break;
+      case "FETCH_DATA":
+        var fetchData = event.data.data;
+        var fetchOptions = {
+          method: fetchData.method || "GET",
+          headers: fetchData.headers || {},
+          credentials: "include",
+        };
+        if (fetchData.body && fetchOptions.method !== "GET") {
+          fetchOptions.body = JSON.stringify(fetchData.body);
+          if (!fetchOptions.headers["Content-Type"]) {
+            fetchOptions.headers["Content-Type"] = "application/json";
+          }
+        }
+        fetch(fetchData.url, fetchOptions)
+          .then(function (response) {
+            return response.json()
+              .then(function (data) { return { status: response.status, data: data }; })
+              .catch(function () { return { status: response.status, data: null }; });
+          })
+          .then(function (result) { sendResponse(event, result); })
+          .catch(function (error) { sendResponse(event, { error: error.message }); });
+        break;
+      case "SET_LOCALSTORAGE":
+        var storageData = event.data.data;
+        window.localStorage.setItem(storageData.key, JSON.stringify(storageData.value));
+        sendResponse(event, { status: 200 });
+        break;
+      case "GET_HREF":
+        sendResponse(event, { href: window.location.href, search: window.location.search });
+        break;
+      case "SET_HREF":
+        var url = event.data.data && event.data.data.url;
+        if (!url) { sendResponse(event, { status: 404, message: "Missing url" }); break; }
+        window.location.href = url;
+        break;
+    }
+  });
+})();
+</script>
 
 
   </body>
