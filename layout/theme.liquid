@@ -502,7 +502,12 @@ document.addEventListener("DOMContentLoaded", () => {
         fetch(fetchUrl, fetchOptions)
           .then(function (response) {
             return response.json()
-              .then(function (data) { return { status: response.status, data: data }; })
+              .then(function (data) {
+                if (typeof data === 'object' && data !== null) {
+                  return Object.assign({ status: response.status }, data);
+                }
+                return { status: response.status, data: data };
+              })
               .catch(function () { return { status: response.status, data: null }; });
           })
           .then(function (result) { sendResponse(event, result); })
